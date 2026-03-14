@@ -23,7 +23,7 @@ document.querySelector(".login-btn").addEventListener("click", function(e){
             vx:(Math.random()-0.5)*8,
             vy:(Math.random()-0.5)*8,
 
-            life:100,
+            life:200,
 
             color:`hsl(${Math.random()*360},100%,60%)`
 
@@ -35,17 +35,17 @@ document.querySelector(".login-btn").addEventListener("click", function(e){
 
 document.addEventListener("mousemove", function(e){
 
-    for(let i=0;i<5;i++){
+    for(let i=0;i<3;i++){
 
         particles.push({
 
             x:e.clientX,
             y:e.clientY,
 
-            vx:(Math.random()-0.5)*5,
+            vx:(Math.random()-0.5)*2,
             vy:(Math.random()-0.5)*2,
 
-            life:30,
+            life:40,
 
             color:`hsl(${Math.random()*360},100%,60%)`
 
