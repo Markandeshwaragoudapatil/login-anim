@@ -33,6 +33,28 @@ document.querySelector(".login-btn").addEventListener("click", function(e){
 
 });
 
+document.addEventListener("mousemove", function(e){
+
+    for(let i=0;i<5;i++){
+
+        particles.push({
+
+            x:e.clientX,
+            y:e.clientY,
+
+            vx:(Math.random()-0.5)*5,
+            vy:(Math.random()-0.5)*2,
+
+            life:30,
+
+            color:`hsl(${Math.random()*360},100%,60%)`
+
+        });
+
+    }
+
+});
+
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -40,7 +62,7 @@ function animate() {
         p.x += p.vx;
         p.y += p.vy;
 
-        p.vy += 0.05;
+        p.vy += 0.05; // gravity
 
         p.life--;
 
