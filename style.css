@@ -11,9 +11,19 @@ body {
     justify-content: center;
     align-items: center;
 
+    cursor:none;
+
     background: url("bg.jpg");
     background-size: cover;
     background-position: center;
+}
+
+#cursor{
+    position:fixed;
+    width:40px;
+    pointer-events:none;
+    transform:translate(-50%, -50%);
+    z-index:1000;
 }
 
 .login-form {

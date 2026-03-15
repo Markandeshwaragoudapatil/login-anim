@@ -33,25 +33,12 @@ document.querySelector(".login-btn").addEventListener("click", function(e){
 
 });
 
+const cursor = document.getElementById("cursor");
+
 document.addEventListener("mousemove", function(e){
 
-    for(let i=0;i<3;i++){
-
-        particles.push({
-
-            x:e.clientX,
-            y:e.clientY,
-
-            vx:(Math.random()-0.5)*2,
-            vy:(Math.random()-0.5)*2,
-
-            life:40,
-
-            color:`hsl(${Math.random()*360},100%,60%)`
-
-        });
-
-    }
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
 
 });
 
